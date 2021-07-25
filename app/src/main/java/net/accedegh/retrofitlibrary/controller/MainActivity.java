@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
                     movieArrayList = response.body();
-                    recyclerView.setAdapter(new MoviesAdapter(getApplicationContext(),movieArrayList));
+                    recyclerView.setAdapter(new MoviesAdapter(getApplicationContext(),movieArrayList)); //Thir have another system but its good
                     recyclerView.smoothScrollToPosition(0);
                     //Toast.makeText(MainActivity.this, movieArrayList.toString(), Toast.LENGTH_SHORT).show();
                     swipeContainer.setRefreshing(false);
